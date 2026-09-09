@@ -1,0 +1,17 @@
+# Raw dataset containing customer-level records
+01_Raw_Data/
+
+# Private cleaned dataset
+02_Cleaned_Data/superstore_cleaned.csv
+
+# Detailed imputation evidence containing customer information
+05_Documentation/postal_code_imputations.csv
+
+# Private working notebook containing record-level outputs
+07_Python/retail_data_cleaning.ipynb
+
+# VS Code and Python temporary files
+.vscode/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc

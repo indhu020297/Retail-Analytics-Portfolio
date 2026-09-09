@@ -1,0 +1,31 @@
+Column Name,Data Type,Description,Governance Classification,Recommended Handling
+Row ID,int64,Unique identifier for each dataset row.,Operational identifier,Retain only while required and provide access according to business need.
+Order ID,object,Identifier assigned to a customer order.,Operational identifier,Retain only while required and provide access according to business need.
+Order Date,datetime64[ns],Date on which the order was placed.,Transactional data,Retain only while required and provide access according to business need.
+Ship Date,datetime64[ns],Date on which the order was shipped.,Transactional data,Retain only while required and provide access according to business need.
+Ship Mode,object,Delivery service selected for the order.,Operational data,Retain only while required and provide access according to business need.
+Customer ID,object,Identifier assigned to a customer.,Pseudonymous customer identifier,Restrict access and replace with an anonymous identifier in public outputs.
+Customer Name,object,Name associated with the customer record.,Personal data,Remove or mask before publishing or sharing externally.
+Segment,object,"Customer classification: Consumer, Corporate or Home Office.",Customer profile data,Use only where required for the stated analytical purpose.
+Country,object,Customer delivery country.,Location data,Review whether this level of location detail is necessary.
+City,object,Customer delivery city.,Location data,Remove or aggregate when individual-level location is unnecessary.
+State,object,Customer delivery state.,Location data,Use only where required for geographical analysis.
+Postal Code,string,Five-character delivery postal code.,Location data,Restrict or aggregate because it may increase re-identification risk.
+Region,object,Geographical sales region.,Operational location data,Retain only while required and provide access according to business need.
+Product ID,object,Original identifier assigned to a product.,Product master data,Retain only while required and provide access according to business need.
+Category,object,High-level product category.,Product master data,Retain only while required and provide access according to business need.
+Sub-Category,object,Detailed product classification.,Product master data,Retain only while required and provide access according to business need.
+Product Name,object,Recorded product description.,Product master data,Retain only while required and provide access according to business need.
+Sales,float64,Sales value associated with the order line.,Commercial and transactional data,Restrict access because it represents commercially sensitive transaction information.
+Postal Code Imputed,bool,Flag showing whether the postal code was filled during cleaning.,Data-quality metadata,Retain only while required and provide access according to business need.
+Product ID Reused,bool,Flag showing whether the Product ID is associated with multiple product names.,Data-quality metadata,Retain only while required and provide access according to business need.
+Product Name Multiple IDs,bool,Flag showing whether the product name is associated with multiple Product IDs.,Data-quality metadata,Retain only while required and provide access according to business need.
+Product Key,string,Composite key created from Product ID and Product Name.,Derived operational identifier,Retain only while required and provide access according to business need.
+Data Quality Issue Count,int64,Number of identified data-quality issues affecting the row.,Data-quality metadata,Retain only while required and provide access according to business need.
+Data Quality Status,object,Overall result of the data-quality checks.,Data-quality metadata,Retain only while required and provide access according to business need.
+Data Quality Notes,object,Readable explanation of identified data-quality issues.,Data-quality metadata,Retain only while required and provide access according to business need.
+Shipping Days,int64,Number of days between the order and shipping dates.,Derived operational data,Retain only while required and provide access according to business need.
+Order Year,int32,Calendar year extracted from Order Date.,Derived analytical data,Retain only while required and provide access according to business need.
+Order Month Number,int32,Numeric month extracted from Order Date.,Derived analytical data,Retain only while required and provide access according to business need.
+Order Month,object,Month name extracted from Order Date.,Derived analytical data,Retain only while required and provide access according to business need.
+Order Year-Month,string,Year and month value used for monthly analysis.,Derived analytical data,Retain only while required and provide access according to business need.

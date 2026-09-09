@@ -1,0 +1,14 @@
+Metric,Result
+Total raw records,9800
+Original columns,18
+Cleaned columns,30
+Missing values before cleaning,11
+Missing values after cleaning,0
+Completely duplicated rows,0
+Postal codes imputed,11
+Product IDs reused for different products,32
+Rows affected by reused Product IDs,331
+Product names linked to multiple IDs,16
+Unique composite Product Keys,1893
+Records passed,9151
+Records requiring review,649
